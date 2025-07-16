@@ -76,12 +76,13 @@ if (image) {
 
 {
   !darkImage && !lightImage && !rawImageHtml && (
-    <StarlightPage
+    <StarlightPage 
       frontmatter={{
         ...(remarkPluginFrontmatter as any),
         pagefind: false,
+        title: entry.data.title
       }}
-      headings={headings}
+      headings={headings} 
       hasSidebar={hasSidebar}
       {...(isFallback ? { isFallback: true } : {})}
     >
